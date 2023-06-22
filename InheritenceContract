@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.19;
+
+import {SimpleStorage} from "./SimpleStorage.sol";
+
+// This is an inherited contract:- is a child contract of SimpleStorage
+contract InheritenceContract is SimpleStorage {
+
+    // this function is overriden from it's parent contract ``` SimpleStorage ```
+    function setFavoriteNumber(uint256 _myFavNum) public override {
+        favoriteNumber = _myFavNum + 69;
+    }
+}
